@@ -1,0 +1,118 @@
+body,html {
+    height: 100%;
+}
+[data-reactroot] {
+    height: 100% !important;
+}
+#app {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+a#a-logout {
+    float: right;
+}
+div.div-body {
+    width: 100%;
+    height: 100%;
+}
+
+div.div-footer {
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    background-color: #f2f2f2;
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    position: absolute;
+}
+a.a-bot-href {
+    font-size: 14px;
+    padding: 0px 20px 0px 0px;
+    cursor: pointer;
+    color: #777;
+}
+a:hover {
+    text-decoration: none;
+}
+
+ul.ul-bot-nav {
+    list-style: none;
+}
+li.li-bot-nav {
+    float: right;
+    margin: 12px 0px;
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+div.div-login {
+    width: 50%;
+    height: 500px;
+    margin: auto;
+    border: 1px solid #f2f2f2;
+}
+.panel {
+    border: 0px;
+}
+.panel-heading {
+    padding: 0px;
+    margin-bottom: 50px;
+}
+#login-panel {
+    text-align: center;
+    padding: 10px 0px;
+    width: 50%;
+    display: inline-block;
+    border-right: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+}
+#register-panel {
+    text-align: center;
+    padding: 10px 0px;
+    width: 50%;
+    display: inline-block;
+    border-bottom: 1px solid #f2f2f2;
+}
+#form-login {
+    height: 100%;
+}
+#form-register {
+    display: none;
+}
+#outer-panel {
+    height: 100%;
+}
+.btn-login {
+    margin-top: 15px;
+    background-color: #00B2EE;
+}
+div.offer-body {
+    display: flex;
+    flex-direction: row;
+    min-width: 200px;
+    min-height: 200px;
+}
+div.div-offer {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    display: flex;
+    margin-right: 100px;
+    align-items: center;
+    justify-content: center;
+}
+div.div-search-body {
+    width: 100%;
+    height: 75px;
+    background-color: #f2f2f2;
+    margin-bottom: 30px;
+}
+.navbar {
+    margin: 0px;
+}
