@@ -7,7 +7,11 @@ export default class Offer extends React.Component {
     render() {
         return ( 
             <div className="div-offer">
-                Offer
+                <div className="div-offer-title">
+                </div>
+                <div className="offer-description">
+                </div>
+                
             </div>
         )
     }

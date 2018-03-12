@@ -6,15 +6,13 @@ export default class Home extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-           'feedOn': true,
-           'feedData' : [],
+
         } 
     }
     render() {
         return (
             <div className="div-body">
-                <Header />
-                <SearchOffers />
+                <Header loggedIn="off"/>
                 <Login />
                 <Footer />
             </div>
