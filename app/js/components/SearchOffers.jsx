@@ -1,7 +1,6 @@
 import React from 'react';
-import js from '../../js/search.js'
 
-export default class Home extends React.Component {
+export default class SearchOffers extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -18,12 +17,17 @@ export default class Home extends React.Component {
                         </span>
                     </div>
                 </div>
-                Sort By
-                <select className="selectpicker">
-                    <option>Mustard</option>
-                    <option>Ketchup</option>
-                    <option>Relish</option>
-                </select>
+                <div className="dropdown">
+                  <button className="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Search As
+                    <span className="caret" id = "dropdown-caret"></span>
+                  </button>
+                  <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">Anyone</a></li>
+                    <li><a href="#">Buyer</a></li>
+                    <li><a href="#">Seller</a></li>
+                  </ul>
+                </div>
 
             </div>
         )

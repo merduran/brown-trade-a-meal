@@ -10,8 +10,8 @@ export default class Header extends React.Component {
             button = ""
         }
         return ( 
-        <div className="navbar navbar-default width 100"> 
-            <a className="navbar-brand" href = "/"> Brown Trade-A-Meal </a>
+        <div className="navbar navbar-default width 100" id="div-header"> 
+            <a className="logo" href = "/"> Brown Trade-A-Meal </a>
             {button}
         </div>
         )

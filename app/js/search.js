@@ -1,3 +1,3 @@
 $(document).ready(() => {
-    $('.selectpicker').selectpicker();
+    $('.selectpicker').selectpicker('refresh');
 })

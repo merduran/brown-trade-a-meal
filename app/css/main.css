@@ -1,8 +1,66 @@
 body,html {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
+div.login-container {
+    display: flex;
+    flex: 1;
+}
+div.img-hero {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    flex-direction: column;
+    position: relative;
+}
+div.img-hero:before {
+    background-color: black;
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.1;
+    background-position: center;
+    background-size: cover;
+}
+div.img-hero:after {
+    background-image: url("https://www.shawmut.com/assets/images/back_end/portfolio/1_1424294905_Brown-Andrews-1.jpg");
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -2;
+    opacity: 0.5;
+    background-position: center;
+    background-size: cover;
+}
+.h1-hero {
+    color: white;
+    font-weight: bold;
+    box-sizing: content-box;
+    height:auto;
+    margin-bottom: 40px;
+}
+#home-button {
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 90px;
+}
+
 [data-reactroot] {
     height: 100% !important;
+    display: flex;
+    flex-direction: column;
 }
 #app {
     height: 100%;
@@ -10,16 +68,26 @@ body,html {
     padding: 0px;
     margin: 0px;
 }
+a, p, h1, body {
+    font-family: 'Roboto', sans-serif;
+}
 a#a-logout {
     float: right;
+    margin-left: auto;
 }
 div.div-body {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
-
+div.div-outer-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
 div.div-footer {
-    bottom: 0px;
     height: 50px;
     width: 100%;
     background-color: #f2f2f2;
@@ -27,7 +95,7 @@ div.div-footer {
     border-style: solid;
     border-color: black;
     text-align: center;
-    position: absolute;
+    display: flex;
 }
 a.a-bot-href {
     font-size: 14px;
@@ -114,31 +182,128 @@ p.p-login {
 p.p-register {
     color: white;
 }
+p.p-featured {
+    color: #444;
+    font-size: 21px;
+    line-height: 1.5;
+}
+div.featured-body {
+    display: flex;
+    flex-direction: column;
+    flex: .75;
+    padding-top: 25px;
+    padding-left: 25px;
+    max-width: 100%;
+    min-width: 600px;
+}
 div.offer-body {
     display: flex;
-    flex-direction: row;
-    min-width: 200px;
-    min-height: 200px;
+    flex-direction: column;
+    flex: 1;
+    padding-top: 25px;
+    padding-left: 25px;
+    max-width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
-div.div-offer {
-    height: 100px;
-    width: 200px;
+div.filter-body {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    max-width: 200px;
+    border-right: 1px solid #f2f2f2;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+div.market-body {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+li.li-offer {
+    min-height: 200px;
+    width: 30%;
+    min-width: 150px;
     border: 1px solid #f2f2f2;
     border-radius: 3px;
+    display: inline-block;
+    margin-right: 10px;
+    flex-direction: column;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+div.offer-title {
     display: flex;
-    margin-right: 100px;
-    align-items: center;
-    justify-content: center;
+    min-height: 30px;
+    width: 100%;
+    border-bottom: 1px solid #f2f2f2;
+    vertical-align: middle;
+}
+div.div-offer {
+    min-height: 200px;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+p.p-offer-title {
+    margin: 0px;
+    margin-top: 4px;
+    margin-left: 5px;
+}
+p.price {
+    color: #B12704;
+    font-size: 16px;
+    margin-left: auto;
+    float: right;
+    margin-right: 5px;
+    margin-top: 12px;
+}
+p.p-stock {
+    color: #008a00;
+    margin-left: 5px;
+    float: left;
+    display: flex;
+    margin-right: auto;
+    margin-top: 12px;
+}
+p.p-location {
+    display: flex;
+    margin-left: 5px;
+    margin-top: 5px;
+} 
+ul.ul-days {
+    display: flex;
+}
+li.li-days {
+    display: inline-block;
+
+}
+div.offer-description {
+    border-bottom: 1px solid #f2f2f2;
+    display: flex;
+    min-height: 50px;
+    width: 100%;
+    flex: 1;
+    flex-direction: column;
+}
+div.offer-footer {
+    display: flex;
+    min-height: 50px;
+    width: 100%;
 }
 div.div-search-body {
     width: 100%;
-    height: 75px;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    height: 100px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-color: #006fc0;
 }
 .navbar {
     margin: 0px;
     border-radius: 0px;
+    display: flex;
+    background-color: #f2f2f2;
 }
 #input-search, #submit-search {
     display: inline-block;
@@ -151,4 +316,58 @@ div.div-search-body {
 }
 .input-group-btn {
     border: 1px solid #ccc;
+}
+#dropdown-caret {
+    margin-left: 5px;
+}
+.dropdown {
+    float: left;
+    margin-left: 25px;
+}
+.button-buy,.button-sell {
+    float: right;
+    margin-left:auto;
+    max-height: 30px;
+}
+p.categories-text {
+    font-weight: 700;
+    color: #111;
+    font-size: 16px;
+    display: flex;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+ul.ul-categories {
+    list-style-type: none;
+    padding-left: 0px;
+}
+li.li-categories {
+    padding-left: 30px;
+    cursor: pointer;
+}
+ul.ul-container {
+    width: 100%;
+    height: 100%;
+}
+div.blank-space {
+    min-height: 50px;
+    width: 100%;
+    display: flex;
+}
+a.logo {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+img.background {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 550px;
+    left: 0px;
+    z-index: 0;
+    opacity: 0.80;
+    filter: brightness(85%);
 }
