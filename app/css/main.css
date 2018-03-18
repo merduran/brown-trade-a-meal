@@ -2,7 +2,7 @@ body,html {
     height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 div.login-container {
     display: flex;
@@ -16,6 +16,7 @@ div.img-hero {
     flex: 1;
     flex-direction: column;
     position: relative;
+    min-height: 300px;
 }
 div.img-hero:before {
     background-color: black;
@@ -52,6 +53,7 @@ div.img-hero:after {
 }
 #home-button {
     max-width: 160px;
+    min-height: 30px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 90px;
@@ -123,6 +125,7 @@ div.div-login {
     margin: auto;
     border: 1px solid #f2f2f2;
     margin-top: 20px;
+    border-radius: 5px;
 }
 .panel {
     border: 0px;
@@ -166,14 +169,17 @@ div#panel-register:active {
 #outer-panel {
     height: 100%;
 }
-.btn-login {
+.btn-login,.btn-register {
     margin-top: 15px;
-    background-color: #00B2EE;
+    background-color: #32c1f1;
     color: white;
 }
-.btn-register {
-    margin-top: 15px;
-    background-color: #00B2EE;
+.btn-register:hover,.btn-login:hover {
+    background-color: #00b2ee;
+    color: white;
+}
+.btn-register:active,.btn-login:active {
+    background-color: #00a0d6;
     color: white;
 }
 p.p-login {
@@ -222,8 +228,8 @@ div.market-body {
 }
 
 li.li-offer {
-    min-height: 200px;
-    width: 30%;
+    min-height: 150px;
+    width: 27%;
     min-width: 150px;
     border: 1px solid #f2f2f2;
     border-radius: 3px;
@@ -237,20 +243,34 @@ div.offer-title {
     display: flex;
     min-height: 30px;
     width: 100%;
-    border-bottom: 1px solid #f2f2f2;
     vertical-align: middle;
-}
-div.div-offer {
-    min-height: 200px;
-    min-width: 150px;
-    display: flex;
-    flex-direction: column;
 }
 p.p-offer-title {
     margin: 0px;
     margin-top: 4px;
-    margin-left: 5px;
+    margin: auto;
+    font-size: 16px;
+    font-weight: 700;
 }
+div.offer-description {
+    display: flex;
+    min-height: 50px;
+    width: 100%;
+    flex: 1;
+    flex-direction: column;
+}
+div.offer-footer {
+    display: flex;
+    min-height: 50px;
+    width: 100%;
+}
+div.div-offer {
+    min-height: 150px;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
 p.price {
     color: #B12704;
     font-size: 16px;
@@ -279,19 +299,7 @@ li.li-days {
     display: inline-block;
 
 }
-div.offer-description {
-    border-bottom: 1px solid #f2f2f2;
-    display: flex;
-    min-height: 50px;
-    width: 100%;
-    flex: 1;
-    flex-direction: column;
-}
-div.offer-footer {
-    display: flex;
-    min-height: 50px;
-    width: 100%;
-}
+
 div.div-search-body {
     width: 100%;
     height: 100px;
@@ -322,7 +330,7 @@ div.div-search-body {
 }
 .dropdown {
     float: left;
-    margin-left: 25px;
+    margin-left: 35px;
 }
 .button-buy,.button-sell {
     float: right;
@@ -361,6 +369,14 @@ a.logo {
     font-size: 18px;
     line-height: 20px;
 }
+a.logo2 {
+    font-size: 22px;
+    font-family: 'Anivers', sans-serif;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-left: 10px;
+    color: white;
+}
 img.background {
     object-fit: cover;
     position: absolute;
@@ -370,4 +386,27 @@ img.background {
     z-index: 0;
     opacity: 0.80;
     filter: brightness(85%);
+}
+#search-button {
+    border-radius: 0px;
+}
+ul.ul-location {
+    list-style-type: none;
+    padding-left: 5px;
+}
+li.li-location {
+    display: inline-block;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+p.p-location-tag {
+    font-size: 12px;
+    margin: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }

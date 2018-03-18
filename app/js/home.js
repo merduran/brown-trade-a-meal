@@ -1,5 +1,5 @@
 $(document).ready(() => {
     $('#home-button').click(() => {
-        window.location.href= "/market"
+        window.location.href= "/login"
     })
 })

@@ -7,11 +7,14 @@ export default class SearchOffers extends React.Component {
     render() {
         return (
             <div className="div-search-body">
-                <div className="col-sm-6 col-sm-offset-3">
+                <div className="col-sm-2">
+                    <a className="logo2" href = "/"> Trade-A-Meal </a>
+                </div>
+                <div className="col-sm-6">
                     <div className="input-group">
                         <input type="text" id="input-search" className="form-control" placeholder="Search" />
                         <span className="input-group-btn">
-                            <button className="btn" type="submit">
+                            <button className="btn" type="submit" id="search-button">
                                 <span className="glyphicon glyphicon-search"></span>
                             </button>  
                         </span>
