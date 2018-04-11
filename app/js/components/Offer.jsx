@@ -1,23 +1,41 @@
 import React from 'react';
+// import DetailedOffer from './DetailedOffer.js'
+import js from '../../js/market.js'
 
 export default class Offer extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
     }
-    render() {
-        let example_template = ['Ratty', 'Andrews Commons', 'Blue Room']
-        if (this.props.test1 == "example2") {
-            example_template = ['Ratty', 'Andrews Commons']
-        } else if (this.props.test1 == "example3") {
-            example_template = ["All"]
+
+    handleClick(){
+        if (window.location.href === 'http://localhost:8080/'){
+            window.location.href = '/market';
+        } else {
+            this.props.toggleOfferExpansion(true);
+            this.props.getClickedOffer(
+                {
+                    title: this.props.title,
+                    location: this.props.location, 
+                    number: this.props.number,
+                    price: this.props.price,
+                    type: this.props.type,
+                }
+            );
         }
-        let html_array = example_template.map((el) => {
-            return <li className="li-location"> 
+        
+    }
+
+    render() {
+        var i = 0
+        let html_array = this.props.location.map((el) => {
+            i++;
+            return <li className="li-location" key={i}> 
             <p className = "p-location-tag"> {el} </p>
             </li>
+
         })
-        return ( 
-            <li className="li-offer">
+        return (            
+            <li className="li-offer" onClick={() => this.handleClick()}>
                 <div className="div-offer">
                     <div className="offer-title">
                         <p className="p-offer-title"> {this.props.title} </p>

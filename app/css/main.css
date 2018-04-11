@@ -58,6 +58,136 @@ div.img-hero:after {
     margin-right: auto;
     margin-bottom: 90px;
 }
+h1.expanded-offer-title{
+    border-bottom-width: 3px;
+    border-color: black;
+}
+div.expanded-offer-content-container {
+    width: 70vw;
+/*    background-color: black;
+*/    /*display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;*/
+}
+div.expanded-offer-content {
+    margin: 10px;
+    margin-bottom: 40px;
+    position: relative;
+}
+div.expanded-offer-button-container{
+    display: flex;
+    justify-content: center;
+}
+div.expanded-offer-contact-profile-info{
+    display: inline-flex;
+    align-items: center;
+/*    background-color: yellow;
+*/}
+h3.expanded-offer-contact-profile-username{
+    display: inline;
+}
+img.expanded-offer-contact-profile-photo {
+    margin: 0;
+    width:70px;
+    height: 70px;
+    border-radius: 50%;
+    display: inline;
+    margin-right: 20px;
+}
+h2.expanded-offer-time-title{
+    height: 50px;
+    margin: 0;
+
+   /* border-bottom-width: 3px;
+    border-color: black;*/
+}
+h3.expanded-offer-meeting-days {
+/*    background-color: green;
+*/    font-size: 20px;
+    margin: 0;
+    font-style: italic;
+}
+div.expanded-offer-time, div.expanded-offer-location {
+    display: inline-block/*-flex*/;
+    /*flex-direction: column;
+    justify-content: space-between;*/
+    height: 150px;
+/*    margin-bottom: 50px;
+*/}
+div.expanded-offer-location{
+    position: absolute;
+    left: 500px;
+}
+
+div.expanded-offer-contact-contact-info{
+    display: inline-block;
+    position: absolute;
+    left: 500px;
+    bottom: 0;
+    height: 100%;
+}
+img.expanded-offer-contact-contact-mail-icon {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 10px; 
+}
+div.profile-container {
+    margin: 50px;
+}
+ul.profile-info {
+    padding: 0;
+    display: inline-block;
+}
+div.profile-info-header {
+    font-size: 20px;
+    font-weight: bold;
+}
+div.profile-info-value {
+    font-size: 15px;
+    margin-left: 20px;
+}
+div.profile-info-field {
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+.profile-info-value-input {
+    margin: 2px;
+    width: 100%;
+    padding: 2px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+img.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: block;
+}
+div.edit-button-container {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+}
+img.edit-button-img {
+    width: 30px;
+    height: 30px;
+}
+h5.expanded-offer-contact-contact-mail{
+    display: inline-block;
+}
+#contact-button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 150px;
+    display: block;
+    border-width: 0;
+    background-color: #0A6BC0;
+    border-radius: 50px;
+    color: white;
+    font-size: 15px;
+}
 
 [data-reactroot] {
     height: 100% !important;
@@ -76,6 +206,7 @@ a, p, h1, body {
 a#a-logout {
     float: right;
     margin-left: auto;
+    color: white;
 }
 div.div-body {
     width: 100%;
@@ -90,6 +221,8 @@ div.div-outer-body {
     flex-direction: row;
 }
 div.div-footer {
+    position: absolute;
+    bottom: 0;
     height: 50px;
     width: 100%;
     background-color: #f2f2f2;
@@ -182,6 +315,9 @@ div#panel-register:active {
     background-color: #00a0d6;
     color: white;
 }
+/*.btn-default {
+    margin-left: px;
+}*/
 p.p-login {
     color: white;
 }
@@ -193,6 +329,12 @@ p.p-featured {
     font-size: 21px;
     line-height: 1.5;
 }
+/*div.ul-expanded-container {
+    margin: 0 auto;
+    width: 50vw;
+    height: 70vh;
+    background-color: green;
+}*/
 div.featured-body {
     display: flex;
     flex-direction: column;
@@ -212,6 +354,15 @@ div.offer-body {
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
+div.expanded-offer-body {
+    /*display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-around;*/
+    padding: 25px;
+}
+
 div.filter-body {
     display: flex;
     flex-direction: column;
@@ -226,6 +377,10 @@ div.market-body {
     flex-direction: row;
     flex: 1;
 }
+
+div.div-detailed-offer {
+/*    background: red,
+*/}
 
 li.li-offer {
     min-height: 150px;
@@ -297,27 +452,47 @@ ul.ul-days {
 }
 li.li-days {
     display: inline-block;
-
 }
-
 div.div-search-body {
     width: 100%;
     height: 100px;
     padding-bottom: 30px;
     padding-top: 30px;
-    background-color: #006fc0;
+    background-color: #f2f2f2;
 }
 .navbar {
     margin: 0px;
     border-radius: 0px;
     display: flex;
     background-color: #f2f2f2;
+    border-width: 0;
+}
+div.tab {
+    height: 48px;
+    border-width: 2px;
+    border-color: black;
+    width: 100px;
+    margin-right: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+div.tab:hover {
+    font-size: 15px;
+}
+div.tab_container{
+    margin-left: 30px
+}
+#div-header{
+    background-color: #006fc0;
 }
 #input-search, #submit-search {
     display: inline-block;
 }
 #input-search {
+    border-radius: 3px;
     height: 36px;
+    margin-left: 184px;
 }
 #submit-search {
     width: 200px;
@@ -353,14 +528,21 @@ li.li-categories {
     padding-left: 30px;
     cursor: pointer;
 }
-ul.ul-container {
+ul.ul-container, ul.ul-container-scrollable {
     width: 100%;
-    height: 100%;
+    height: 100%;   
+}
+ul.ul-container-scrollable{
+    overflow-x: scroll;
+    white-space: nowrap;
 }
 div.blank-space {
     min-height: 50px;
     width: 100%;
     display: flex;
+}
+a {
+    color: white;
 }
 a.logo {
     float: left;
@@ -386,6 +568,11 @@ img.background {
     z-index: 0;
     opacity: 0.80;
     filter: brightness(85%);
+}
+
+.input-group-btn{
+    position: absolute;
+    left: 490px;
 }
 #search-button {
     border-radius: 0px;

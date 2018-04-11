@@ -10,7 +10,7 @@ export default class Login extends React.Component {
     render() {
         return (
             <div>
-            <Header loggedIn="off"/> 
+            <Header loggedIn="off" selectedTab = "login-tab"/> 
             <div className = "login-container">
                 <div className="div-login">
                     <div className="panel panel-login" id = "outer-panel">
